@@ -12,8 +12,8 @@
         align-items: center;
     }
 
-    li {
-        margin-right: 5rem;
+    li > a {
+        margin-right: 2rem;
     }
 
     a{
@@ -23,20 +23,34 @@
     .icon {
         display: none;
     }
+
+    i {
+        font-size: 2rem;
+    }
+
+    button {
+        background-color: transparent;
+        color: $green;
+        border-color: $green;
+    }
 }
 
 @media (max-width: 768px) {
     .navbar {
 
+        *{
+            // outline: solid red;
+        }
+
         ul{
-            position: fixed;
-            left: -110%;
+            position: absolute;
+            left: -125%;
             top: 2.5rem;
             flex-direction: column;
             width: 100%;
             transition: 0.3s;
             background-color: $green;
-            padding: 25vh 0rem
+            padding: 0rem !important;
         }
 
         ul.active {
@@ -45,6 +59,9 @@
 
         li {
             margin: 2.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center !important;
 
         }
 
@@ -52,13 +69,14 @@
             color: $cream;
         }
 
+
         .icon {
             display: block;
         }
+
+        button {
+            display: none;
+        }
     }
-
-}
-
-@media (max-width: 600px) {
 
 }

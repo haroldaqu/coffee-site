@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
+import Button from "./Button"
 
 const Navbar = () => {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -10,6 +11,7 @@ const Navbar = () => {
 
     return(
         <nav className="navbar">
+            <NavLink to="/" className="navbar_logo">Coffee</NavLink>
             <ul className={mobileMenu ? `active` : null} onClick={() => toggleMenu()}>
                 <li>
                     <NavLink to="/" className="active">HOME</NavLink>
@@ -24,7 +26,7 @@ const Navbar = () => {
                     <NavLink to="/contact" >CONTACT</NavLink>
                 </li>
             </ul>
-            <NavLink to="/">Coffee</NavLink>
+            <Button children={"BUY NOW"} />
             <NavLink href="#" className={`icon ${mobileMenu ? `active` : null}`} onClick={() => toggleMenu()}>
                 {mobileMenu ?
                     <i className="bi bi-x"></i> :
