@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+public/images/home/hero.png
+public/images/home/hero2.png
+public/images/products/colombia_coffee.png
+public/images/products/ethiopia_coffee.png
+public/images/products/guatemala_coffee.png
+public/images/products/mount_kenya.png
+public/images/products/nevado_del_huila.png
+public/images/products/pacaya_volcano.png
+public/images/vectors/arrow-swirl.png
+public/images/vectors/line-scratch.png

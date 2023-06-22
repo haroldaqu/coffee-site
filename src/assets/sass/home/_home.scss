@@ -1,0 +1,62 @@
+@import '../main/variables';
+@import '../components/button';
+
+.home_headers {
+    display: grid;
+}
+
+.headers_content--one, .headers_content--two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headers_content--one > div, .headers_content--two > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.headers_content--one {
+    background-color: $green;
+    color: $cream;
+
+    button {
+        background-color: $orange;
+        border-color: $orange;
+        color: $cream;
+    }
+}
+
+.headers_content--two {
+    color: $green;
+}
+
+@media (min-width: 768px) {
+    .home_headers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .headers_content--one > div, .headers_content--two > div {
+        width: 75% !important;
+
+        p {
+            max-width: 75% !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .headers_content--one, .headers_content--two {
+        min-height: 40vh;
+        padding: 2rem;
+
+    }
+
+    .headers_content--two {
+        order: 3;
+    }
+}

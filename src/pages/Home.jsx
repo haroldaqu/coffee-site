@@ -1,8 +1,12 @@
+import HomeHeaders from "../components/home/HomeHeaders"
+
 const Home  = () => {
     return(
-        <div className="home">
-            home
-        </div>
+        <main className="home">
+            
+            <HomeHeaders />
+
+        </main>
     )
 }
 
