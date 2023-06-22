@@ -22,8 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-public/images/home/hero.png
-public/images/home/hero2.png
 public/images/products/colombia_coffee.png
 public/images/products/ethiopia_coffee.png
 public/images/products/guatemala_coffee.png
