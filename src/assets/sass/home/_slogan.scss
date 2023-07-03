@@ -1,0 +1,46 @@
+.home_slogan {
+    max-width: 1440px;
+    margin: auto;
+    padding: 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-weight: 500;
+        color: $green;
+        text-align: center;
+        margin-bottom: 5rem !important;
+    }
+
+    img {
+        border-radius: 7.5%;
+        max-height: 80% !important;
+        margin-bottom: 2rem !important;
+        object-fit: cover;
+    }
+
+    h1, .slogan_container {
+        max-width: 80%;
+    }
+
+    .slogan_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .home_slogan {
+    img {
+            height: 60% !important;
+        }
+    }
+}

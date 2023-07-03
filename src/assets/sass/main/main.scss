@@ -27,6 +27,11 @@ a {
     text-decoration: none;
 }
 
+span {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 p, a {
     font-size: 1.125rem !important;
     font-weight: 500 !important;
@@ -34,6 +39,7 @@ p, a {
     margin: 0 !important;
     padding: 0 !important;
 }
+
 
 h1 {
     font-size: 3rem !important;
@@ -44,11 +50,27 @@ h1 {
 img {
     width: 100%;
     object-fit: cover;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+img.vector {
+    max-width: 50%;
+    object-fit: none;
+}
+
+img.vector--arrow {
+    max-height: 150%;
+    object-fit: none;
 }
 
 @media (max-width : 992px) {
     h1 {
         font-size: 2rem !important;
+    }
+
+    img.vector, img.vector--arrow {
+        display: none !important;
     }
 }
 

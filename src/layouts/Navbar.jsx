@@ -26,7 +26,7 @@ const Navbar = () => {
                     <NavLink to="/contact" >CONTACT</NavLink>
                 </li>
             </ul>
-            <Button children={"BUY NOW"} />
+            <Button children={"Buy Now"} />
             <NavLink href="#" className={`icon ${mobileMenu ? `active` : null}`} onClick={() => toggleMenu()}>
                 {mobileMenu ?
                     <i className="bi bi-x"></i> :
