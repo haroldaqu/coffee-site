@@ -8,6 +8,7 @@
 @import '../layouts/navbar';
 @import '../layouts/footer';
 @import '../home/home';
+@import '../about/about';
 @import '../components/button';
 @import '../components/vectors';
 
@@ -65,6 +66,10 @@ img {
     img.vector, img.vector--arrow {
         display: none !important;
     }
+}
+
+.about {
+    outline: solid red !important;
 }
 
 
