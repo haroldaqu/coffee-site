@@ -1,8 +1,10 @@
+import Newsletter from "../components/home/Newsletter"
+
 const Products  = () => {
     return(
-        <div className="products">
-            Products
-        </div>
+        <section className="products">
+            
+        </section>
     )
 }
 

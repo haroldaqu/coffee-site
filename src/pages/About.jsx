@@ -1,8 +1,34 @@
-import SectionOne from "../components/about/SectionOne"
 import Button from "../layouts/Button"
 
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+import Newsletter from "../components/home/Newsletter";
+
+const reviews = [
+    {
+        id: 1,
+        review: "The coffee product from [Company Name] is an absolute game-changer! The flavor profile is incredibly rich and bold, with hints of chocolate and caramel that dance on the palate. It's the perfect pick-me-up in the morning or a delightful treat for any time of the day. I can't imagine starting my day without this exceptional coffee."
+    },
+    {
+        id: 2,
+        review: "I'm blown away by the quality of [Company Name]'s coffee product. The aroma alone is enough to get me excited for my morning ritual. The taste is smooth and well-balanced, with subtle notes of fruit and a lingering, satisfying finish. It's evident that this brand takes pride in their craft, and I'm grateful to have discovered their remarkable coffee."
+    },
+    {
+        id: 3,
+        review: "As a coffee aficionado, I've tried countless brands, but [Company Name]'s coffee product truly stands out. The beans are clearly sourced with care, resulting in a cup of coffee that is bursting with flavor and freshness. The attention to detail in the roasting process is evident in every sip. It's clear that [Company Name] is committed to delivering an exceptional coffee experience, and they've certainly won me over as a loyal customer."
+    },
+]
 
 const About  = () => {
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
+
     return(
         <main className="about">
 
@@ -23,8 +49,41 @@ const About  = () => {
                 </div>
             </section>
 
+            <section className="about_banner">
+                <img src="/images/about/banner.png" alt="" />
+            </section>
+
+            <section className="about_info">
+                <div className="about_info--one">
+                    <h1>
+                        HOW OUR <br /> JOURNEY <br /> STARTED
+                    </h1>
+                    <img src="/images/vectors/line-scratch.png" alt="" className="vector vector--line"/>
+                </div>
+                <div className="about_info--two">
+                    <p>
+                        With a passion for coffee at our core, our company was founded on the belief that a great cup of coffee can transform your day. From the very beginning, we dedicated ourselves to sourcing the highest quality beans and perfecting our roasting techniques. This commitment to excellence is what sets us apart.
+                    </p>
+                    <p>
+                        As our reputation grew, so did our ambition. We expanded our offerings, exploring unique flavors and innovative brewing methods. Our team of coffee enthusiasts works tirelessly to deliver an unparalleled coffee experience to our customers, ensuring that each sip is a moment of pure bliss.
 
 
+                    </p>
+                    <p>
+                        Today, we take pride in our journey, from those early days of experimentation to becoming a trusted name in the world of coffee. Join us on this flavorful adventure, and let our passion for coffee ignite your senses.
+                    </p>
+                </div>
+                <div className="about_info--three">
+
+                </div>
+                <div className="about_info--four">
+                    <h1>
+                        CUSTOMER <br /> REVIEWS
+                    </h1>
+                    <img src="/images/vectors/arrow.png" alt="" className="vector"/>
+                </div>
+            </section>
+            
         </main>
     )
 }

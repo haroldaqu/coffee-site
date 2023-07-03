@@ -51,14 +51,14 @@
         ul{
             position: absolute;
             left: -100%;
-            top: 2.5rem;
+            top: 4.5rem;
             flex-direction: column;
             justify-content: start;
             width: 100%;
             transition: 0.3s;
             background-color: $green;
             padding: 0rem !important;
-            height: calc(100vh - 1.5em);
+            height: calc(100vh);
         }
 
         ul.active {
@@ -74,7 +74,7 @@
         }
 
         li > a{
-            color: $cream;
+            color: $white !important;
         }
 
 
