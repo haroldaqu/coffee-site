@@ -1,0 +1,26 @@
+@import '../main/variables';
+
+.products_header {
+        padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+    h1 {
+        position: relative !important;
+        color: $green;
+        text-align: center;
+        margin: 6rem 0rem !important;
+    }
+
+        .vector--okay {
+            position: absolute !important;
+            transform: translateX(-65%) translateY(-65%);
+        }
+    
+        .vector--line {
+            position: absolute !important;
+            transform: translateX(-210%) translateY(340%) !important;
+        }
+}

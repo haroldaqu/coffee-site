@@ -1,0 +1,58 @@
+@import '../main/variables';
+
+.products {
+    overflow: hidden !important;
+}
+
+.specialty_line > div,
+.mountain_line > div {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+        max-width: 70%;
+    }
+
+    p, h3 {
+        color: $white !important;
+    }
+    button {
+        background-color: $orange;
+        border-color: $orange;
+        color: $white;
+    }
+
+}
+
+.specialty_line {
+    margin-top: 10rem;
+}
+
+.mountain_line {
+    margin-top: 30rem;
+    margin-bottom: 30rem;
+}
+
+.specialty_line::before,
+.mountain_line::before {
+    content: "";
+    background-color: $green;
+    position: absolute;
+    width: 100%;
+    z-index: -99;
+    height: 750px;
+    transform: translateY(40%);
+}
+
+.lineup_name {
+    outline: solid red;
+    justify-content: center !important;
+    align-items: center !important;
+
+    h1 {
+        color: $white;
+        font-weight: 400;
+    }
+}
+
+
