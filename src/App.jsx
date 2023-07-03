@@ -17,6 +17,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
+import Footer from './layouts/Footer';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="products" element={<Products /> } />
         <Route exact path="contact" element={<Contact /> } />
       </Routes>
+      <Footer />
     </Router>
   )
 }

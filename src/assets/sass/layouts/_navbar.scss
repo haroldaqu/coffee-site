@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // margin: 1rem 1.5rem;
     padding: 1rem 1.5rem;
     max-width: 1440px;
     margin: auto;
@@ -21,6 +20,10 @@
 
     a{
         color: $green;
+    }
+
+    li > a:hover {
+        border-bottom: solid 2px $orange;
     }
 
     .icon {
@@ -50,7 +53,7 @@
             left: -100%;
             top: 2.5rem;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: start;
             width: 100%;
             transition: 0.3s;
             background-color: $green;

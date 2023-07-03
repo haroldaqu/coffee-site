@@ -1,1 +1,42 @@
 @import '../main/variables';
+
+.footer {
+    background-color: $green;
+}
+
+.footer > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    max-width: 1440px;
+    
+    a {
+            color: $white;
+        }
+
+    a:hover {
+            cursor: pointer !important;
+        }
+}
+
+.footer_socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: center !important;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.footer_links {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
