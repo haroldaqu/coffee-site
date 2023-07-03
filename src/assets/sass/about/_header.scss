@@ -1,0 +1,64 @@
+@import '../main/variables';
+
+.about_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        position: relative;
+        color: $green;
+        text-align: center;
+        margin: 6rem 0rem !important;
+    }
+
+    > img {
+        transform: translateX(-30%);
+    }
+
+    img {
+        border-radius: 2.5rem;
+    }
+
+    .vector--star {
+        position: absolute;
+        transform: translateX(-65%) translateY(-57%);
+    }
+
+    .vector--line {
+        position: absolute;
+        transform: translateX(-210%) translateY(340%) !important;
+
+    }
+
+}
+
+// @media (max-width: )
+
+.about_header > div{
+    max-width: 1400px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7.5rem;
+
+    > img {
+        max-height: 550px !important;
+    }
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    p {
+        color: $green;
+    }
+
+    button {
+        color: $white;
+        background-color: $orange;
+    }
+}
