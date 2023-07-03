@@ -4,7 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 1.5rem;
+    // margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
     max-width: 1440px;
     margin: auto;
 
@@ -46,13 +47,15 @@
 
         ul{
             position: absolute;
-            left: -125%;
+            left: -100%;
             top: 2.5rem;
             flex-direction: column;
+            justify-content: space-evenly;
             width: 100%;
             transition: 0.3s;
             background-color: $green;
             padding: 0rem !important;
+            height: calc(100vh - 1.5em);
         }
 
         ul.active {
