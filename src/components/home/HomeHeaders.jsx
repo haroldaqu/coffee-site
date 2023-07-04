@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom"
 import Button from "../../layouts/Button"
 
-const HomeHeaders = () => {
+const HomeHeaders = ({setCurrentLink}) => {
     return(
             <section className="home_headers">
                 <img src="/images/home/hero.png" alt="" />
@@ -9,7 +10,10 @@ const HomeHeaders = () => {
                         <span>Whats new?</span>
                         <h1>Meet our new coffee!</h1>
                         <p>Try one of our signature selections and see what everyone’s talking about or select ‘Catalogue’ at the top of the page to view all the possibilities.</p>
-                        <Button children={"Learn More"} />
+                        <Link to="/about" onClick={() => setCurrentLink(2)}>
+                            <Button children={"Learn More"} />
+                        </Link>
+                        
                     </div>
                 </div>
                 <div className="headers_content--two">

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import HomeProduct from "../components/home/HomeProduct"
 import ProductsData from "../data/ProductsData"
 
-const Products  = () => {
+const Products  = ({setCurrentLink}) => {
     const [specialty, setSpecialty] = useState([])
     const [mountain, setMountain] = useState([])
 

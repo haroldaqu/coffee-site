@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-const Footer = () => {
+const Footer = ({setCurrentLink}) => {
     return(
         <footer className="footer">
             <div className="">
@@ -14,16 +14,16 @@ const Footer = () => {
                 </div>
                 <div className="footer_links">
                     <ul>
-                        <li>
+                        <li onClick={() => setCurrentLink(1)}>
                             <NavLink to="/" className="active">HOME</NavLink>
                         </li>
-                        <li>
+                        <li onClick={() => setCurrentLink(3)}>
                             <NavLink to="/products" >PRODUCTS</NavLink>
                         </li>
-                        <li>
+                        <li onClick={() => setCurrentLink(2)}>
                             <NavLink to="/about" >ABOUT</NavLink>
                         </li>
-                        <li>
+                        <li onClick={() => setCurrentLink(4)}>
                             <NavLink to="/contact" >CONTACT</NavLink>
                         </li>
                     </ul>

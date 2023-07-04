@@ -17,11 +17,13 @@ import About from './pages/About'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Footer from './layouts/Footer';
+import ScrollToTop from './layouts/ScrollToTop';
 
 
 function App() {
 
   const [mobileMenu, setMobileMenu] = useState(false)
+  const [currentLink, setCurrentLink] = useState(1)
   const width = window.innerWidth 
 
   useEffect(() => {
@@ -34,14 +36,30 @@ function App() {
 
   return (
     <Router>
-      <Navbar mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+      <ScrollToTop />
+      <Navbar 
+        mobileMenu={mobileMenu} 
+        setMobileMenu={setMobileMenu} 
+        currentLink={currentLink}
+        setCurrentLink={setCurrentLink}
+      />
       <Routes >
-        <Route exact path="/" element={<Home /> } />
-        <Route path="/about" element={<About /> } />
-        <Route path="/products" element={<Products /> } />
-        <Route path="/contact" element={<Contact /> } />
+        <Route exact path="/" element={<Home 
+          setCurrentLink={setCurrentLink}
+        /> } />
+        <Route path="/about" element={<About 
+          setCurrentLink={setCurrentLink}
+        /> } />
+        <Route path="/products" element={<Products 
+          setCurrentLink={setCurrentLink}
+        /> } />
+        <Route path="/contact" element={<Contact
+          setCurrentLink={setCurrentLink}
+        /> } />
       </Routes>
-      <Footer />
+      <Footer 
+        setCurrentLink={setCurrentLink}
+      />
     </Router>
   )
 }

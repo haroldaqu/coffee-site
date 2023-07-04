@@ -27,6 +27,7 @@
 .specialty_line,
 .mountain_line {
     position: relative !important;
+    z-index: -98 !important;
 }
 
 .mountain_line {

@@ -1,4 +1,5 @@
 import Button from "../layouts/Button"
+import { Link } from "react-router-dom";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,8 +7,7 @@ import { Pagination, Navigation } from "swiper";
 
 
 
-
-const About  = () => {
+const About  = ({setCurrentLink}) => {
 
     const pagination = {
         clickable: true,
@@ -31,7 +31,10 @@ const About  = () => {
                     <div className="">
                         <img src="/images/about/header_three.png" alt="" />
                         <p>We have a possion for coffee and people. Make sure you always have your favorite cup of coffee around to start your day off right. We have a possion for coffee and people. Make sure you always have your favorite cup of coffee around to start your day off right.  e. Make sure you always have your favorite cup of coffee around to start your day off right. </p>
-                        <Button children={"View Products"} />
+                        <Link to="/Products" onClick={() => setCurrentLink(3)} >
+                            <Button children={"View Products"} />
+                        </Link>
+                        
                     </div>
                 </div>
             </section>

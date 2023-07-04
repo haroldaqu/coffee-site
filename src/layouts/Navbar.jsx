@@ -2,7 +2,7 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import Button from "./Button"
 
-const Navbar = ({mobileMenu, setMobileMenu}) => {
+const Navbar = ({mobileMenu, setMobileMenu, currentLink, setCurrentLink}) => {
 
     const toggleMenu = () => {
         setMobileMenu(!mobileMenu)
@@ -12,17 +12,17 @@ const Navbar = ({mobileMenu, setMobileMenu}) => {
         <nav className="navbar">
             <NavLink to="/" className="navbar_logo">Coffee</NavLink>
             <ul className={mobileMenu ? `active` : null} onClick={() => toggleMenu()}>
-                <li>
-                    <NavLink to="/" className="active">HOME</NavLink>
+                <li onClick={() => setCurrentLink(1)} >
+                    <NavLink to="/" className={currentLink === 1 ? "active" : null}>HOME</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/about" >ABOUT</NavLink>
+                <li onClick={() => setCurrentLink(2)}>
+                    <NavLink to="/about" className={currentLink === 2 ? "active" : null}>ABOUT</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/products" >PRODUCTS</NavLink>
+                <li onClick={() => setCurrentLink(3)}>
+                    <NavLink to="/products" className={currentLink === 3 ? "active" : null}>PRODUCTS</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/contact" >CONTACT</NavLink>
+                <li onClick={() => setCurrentLink(4)}>
+                    <NavLink to="/contact" className={currentLink === 4 ? "active" : null}>CONTACT</NavLink>
                 </li>
             </ul>
             <Button children={"Buy Now"} />

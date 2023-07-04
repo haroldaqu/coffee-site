@@ -5,8 +5,9 @@ import ProductCarousel from "./ProductCarousel"
 
 
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
-const Lineup = () => {
+const Lineup = ({setCurrentLink}) => {
     const id = [1,2,3]
     const [lineup, setLineup] = useState([])
 
@@ -25,7 +26,10 @@ const Lineup = () => {
                     <img src="/images/vectors/arrow-swirl.png" alt="" className="vector--arrow"/>
                     <div className="">
                         <p>We have a passion for coffee and people. Make sure you always have your favorite cup of coffee around to start your day off right.</p>
-                        <Button  children={"More Products"}/>
+                        <Link to="/products" onClick={() => setCurrentLink(3)}>
+                            <Button  children={"More Products"}/>
+                        </Link>
+                        
                     </div>
                 </div>
                     <ProductCarousel  lineup={lineup} />  

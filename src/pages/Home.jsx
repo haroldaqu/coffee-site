@@ -4,18 +4,26 @@ import HomeSlogan from "../components/home/HomeSlogan"
 import Lineup from "../components/home/Lineup"
 import Newsletter from "../components/home/Newsletter"
 
-const Home  = () => {
+const Home  = ({setCurrentLink}) => {
 
     return(
         <main className="home">
             
-            <HomeHeaders />
+            <HomeHeaders 
+                setCurrentLink={setCurrentLink}
+            />
 
-            <Lineup />
+            <Lineup 
+                setCurrentLink={setCurrentLink}
+            />
 
-            <HomeSlogan />
+            <HomeSlogan 
+                setCurrentLink={setCurrentLink}
+            />
 
-            <Newsletter />
+            <Newsletter
+                setCurrentLink={setCurrentLink}
+            />
 
         </main>
     )

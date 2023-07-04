@@ -44,6 +44,10 @@
     p {
         max-width: 75%;
     }
+
+    img {
+        max-width: 70%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -97,3 +101,12 @@
 
 
 }
+
+.swiper {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $orange !important;
+    }
+}
+
