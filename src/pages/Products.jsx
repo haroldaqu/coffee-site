@@ -13,25 +13,25 @@ const Products  = () => {
             </section>
 
             <section className="specialty_line">
-                <div className="">
+                <div className="specialty_line--products">
                     <HomeProduct toggle={true} />
                     <HomeProduct toggle={true} />
                     <HomeProduct toggle={true} />
                 </div>
                 <div className="lineup_name">
-                    <img src="/images/vectors/arrow-squiggly.png" alt="" className="vector" />
+                    <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
                     <h1>Specialty Lineup</h1>
                 </div>
             </section>
 
             <section className="mountain_line">
-                <div className="">
+                <div className="mountain_line--products">
                     <HomeProduct toggle={true} />
                     <HomeProduct toggle={true} />
                     <HomeProduct toggle={true} />
                 </div>
                 <div className="lineup_name">
-                    <img src="/images/vectors/arrow-squiggly.png" alt="" className="vector" />
+                    <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
                     <h1>Mountain Lineup</h1>
                 </div>
             </section>

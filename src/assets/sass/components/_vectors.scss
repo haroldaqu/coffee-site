@@ -1,28 +1,29 @@
 @import '../main/variables';
 
 img.vector {
-    max-width: 50%;
+    max-width: 50% !important;
     object-fit: none;
 }
 
 img.vector--arrow {
-    max-height: 150%;
+    max-width: 12%;
     object-fit: none;
 }
 
 img.vector--microphone {
     position: absolute;
-    transform: translateX(-70%) translateY(-12.5%) !important;
+    max-width: 5.5% !important;
+    transform: translateX(-630%) translateY(-12.5%) !important;
 }
 
-@media (max-width: 1380px) {
-    img.vector--microphone {
-        transform: translateX(-75%) translateY(-20%) !important;
-    }
-}
+// @media (max-width: 1380px) {
+//     img.vector--microphone {
+//         transform: translateX(-75%) translateY(-20%) !important;
+//     }
+// }
 
-@media (max-width: 1240px) {
-    img.vector--microphone {
-        transform: translateX(-75%) translateY(2.5%) !important;
-    }
-}
+// @media (max-width: 1240px) {
+//     img.vector--microphone {
+//         transform: translateX(-75%) translateY(2.5%) !important;
+//     }
+// }

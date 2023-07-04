@@ -5,6 +5,13 @@
 // Banner
 .about_banner {
     margin-top: 7.5rem;
-
+    padding: 0 !important;
+    height: 700px !important;
+    
+    img {
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100%;
+    }
 }
 

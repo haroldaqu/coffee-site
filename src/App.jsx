@@ -1,6 +1,6 @@
 // React
 import './App.css'
-
+import { useEffect, useState } from 'react';
 // CSS
 import './assets/css/main.min.css'
 
@@ -18,11 +18,23 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Footer from './layouts/Footer';
 
+
 function App() {
+
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const width = window.innerWidth 
+
+  useEffect(() => {
+    if (mobileMenu && width <= 786 ) {
+      document.body.classList.add("active")
+    } else {
+      document.body.classList.remove("active")
+    }
+  },[mobileMenu])
 
   return (
     <Router>
-      <Navbar />
+      <Navbar mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
       <Routes >
         <Route exact path="/" element={<Home /> } />
         <Route path="/about" element={<About /> } />

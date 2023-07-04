@@ -2,10 +2,10 @@
 
 .products_header {
         padding: 1.5rem 2.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
     h1 {
         position: relative !important;
@@ -15,8 +15,9 @@
     }
 
         .vector--okay {
+            max-width: 7.5% !important;
             position: absolute !important;
-            transform: translateX(-65%) translateY(-65%);
+            transform: translateX(-170%) translateY(-140%);
         }
     
         .vector--line {

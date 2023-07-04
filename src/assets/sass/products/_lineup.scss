@@ -1,16 +1,16 @@
 @import '../main/variables';
 
 .products {
-    overflow: hidden !important;
+
 }
 
-.specialty_line > div,
-.mountain_line > div {
+.specialty_line--products,
+.mountain_line--products {
     display: flex;
     justify-content: space-evenly;
 
     img {
-        max-width: 70%;
+        max-width: 60%;
     }
 
     p, h3 {
@@ -45,14 +45,20 @@
 }
 
 .lineup_name {
-    outline: solid red;
+    margin-top: 10rem;
+    display: flex;
     justify-content: center !important;
     align-items: center !important;
+
+    img {
+        max-width: 7.5% !important;
+    }
 
     h1 {
         color: $white;
         font-weight: 400;
     }
+
 }
 
 

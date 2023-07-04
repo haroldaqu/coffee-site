@@ -3,31 +3,18 @@ import Button from "../layouts/Button"
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
-import Newsletter from "../components/home/Newsletter";
 
-const reviews = [
-    {
-        id: 1,
-        review: "The coffee product from [Company Name] is an absolute game-changer! The flavor profile is incredibly rich and bold, with hints of chocolate and caramel that dance on the palate. It's the perfect pick-me-up in the morning or a delightful treat for any time of the day. I can't imagine starting my day without this exceptional coffee."
-    },
-    {
-        id: 2,
-        review: "I'm blown away by the quality of [Company Name]'s coffee product. The aroma alone is enough to get me excited for my morning ritual. The taste is smooth and well-balanced, with subtle notes of fruit and a lingering, satisfying finish. It's evident that this brand takes pride in their craft, and I'm grateful to have discovered their remarkable coffee."
-    },
-    {
-        id: 3,
-        review: "As a coffee aficionado, I've tried countless brands, but [Company Name]'s coffee product truly stands out. The beans are clearly sourced with care, resulting in a cup of coffee that is bursting with flavor and freshness. The attention to detail in the roasting process is evident in every sip. It's clear that [Company Name] is committed to delivering an exceptional coffee experience, and they've certainly won me over as a loyal customer."
-    },
-]
+
+
 
 const About  = () => {
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
-  };
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+        return '<span class="' + className + '"></span>';
+        },
+    };
 
     return(
         <main className="about">
@@ -73,9 +60,32 @@ const About  = () => {
                         Today, we take pride in our journey, from those early days of experimentation to becoming a trusted name in the world of coffee. Join us on this flavorful adventure, and let our passion for coffee ignite your senses.
                     </p>
                 </div>
-                <div className="about_info--three">
 
-                </div>
+                    <Swiper 
+                        spaceBetween={30}
+                        pagination={{
+                            pagination,
+                        clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <i className="swiper--right bi bi-quote"></i>
+                            <p>"The coffee product from [Company Name] is an absolute game-changer! The flavor profile is incredibly rich and bold, with hints of chocolate and caramel that dance on the palate. It's the perfect pick-me-up in the morning or a delightful treat for any time of the day. I can't imagine starting my day without this exceptional coffee."</p>
+                            <i className="swiper--left bi bi-quote"></i>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <i className="swiper--right bi bi-quote"></i>
+                            <p>"I'm blown away by the quality of [Company Name]'s coffee product. The aroma alone is enough to get me excited for my morning ritual. The taste is smooth and well-balanced, with subtle notes of fruit and a lingering, satisfying finish. It's evident that this brand takes pride in their craft, and I'm grateful to have discovered their remarkable coffee."</p>
+                            <i className="swiper--left bi bi-quote"></i>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <i className="swiper--right bi bi-quote"></i>
+                            <p>"As a coffee aficionado, I've tried countless brands, but [Company Name]'s coffee product truly stands out. The beans are clearly sourced with care, resulting in a cup of coffee that is bursting with flavor and freshness. The attention to detail in the roasting process is evident in every sip. It's clear that [Company Name] is committed to delivering an exceptional coffee experience, and they've certainly won me over as a loyal customer."</p>
+                            <i className="swiper--left bi bi-quote"></i>
+                        </SwiperSlide>
+                    </Swiper>
                 <div className="about_info--four">
                     <h1>
                         CUSTOMER <br /> REVIEWS

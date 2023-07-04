@@ -2,8 +2,7 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import Button from "./Button"
 
-const Navbar = () => {
-    const [mobileMenu, setMobileMenu] = useState(false)
+const Navbar = ({mobileMenu, setMobileMenu}) => {
 
     const toggleMenu = () => {
         setMobileMenu(!mobileMenu)

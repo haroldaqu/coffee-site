@@ -52,13 +52,14 @@
             justify-content: start;
             width: 100%;
             transition: 0.3s;
-            background-color: $green;
+            background-color: $green !important;
             padding: 0rem !important;
             height: calc(100vh);
         }
 
         ul.active {
             left: 0;
+            background-color: $green !important;
         }
 
         li {
@@ -66,11 +67,14 @@
             display: flex;
             justify-content: center;
             align-items: center !important;
+            background-color: $green !important;
 
         }
 
         li > a{
             color: $white !important;
+            background-color: $green !important;
+            opacity: 1;
         }
 
 
