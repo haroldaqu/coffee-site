@@ -1,4 +1,4 @@
-import ProductsData from "../../data/ProductsData"
+import productsData from "../../data/ProductsData"
 import Button from "../../layouts/Button"
 import HomeProduct from "./HomeProduct"
 import ProductCarousel from "./ProductCarousel"
@@ -12,7 +12,7 @@ const Lineup = ({setCurrentLink}) => {
     const [lineup, setLineup] = useState([])
 
     useEffect(() => {
-        const filterLineup =  ProductsData && ProductsData.filter((product) => {
+        const filterLineup =  productsData && productsData.filter((product) => {
             return product.lineup === 1
         }) 
         setLineup(filterLineup)

@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react"
 import HomeProduct from "../components/home/HomeProduct"
-import ProductsData from "../data/ProductsData"
+import productsData from "../data/ProductsData"
 
 const Products  = ({setCurrentLink}) => {
     const [specialty, setSpecialty] = useState([])
     const [mountain, setMountain] = useState([])
 
     useEffect(() => {
-        const filterSpecialtiy =  ProductsData && ProductsData.filter((product) => {
+        const filterSpecialtiy =  productsData && productsData.filter((product) => {
             return product.lineup === 1
         }) 
         setSpecialty(filterSpecialtiy)
-        const filterMountain =  ProductsData && ProductsData.filter((product) => {
+        const filterMountain =  productsData && productsData.filter((product) => {
             return product.lineup === 2
         }) 
         setMountain(filterMountain)

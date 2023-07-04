@@ -5,7 +5,7 @@ import Kenya from "../../public/images/products/mount_kenya.png"
 import Nevado from "../../public/images/products/nevado_del_huila.png"
 import Pacaya from "../../public/images/products/pacaya_volcano.png"
 
-const ProductsData = [
+const productsData = [
     {
         id: 1,
         name: "Colombia",
@@ -50,4 +50,4 @@ const ProductsData = [
     },
 ]
 
-export default ProductsData
+export default productsData
