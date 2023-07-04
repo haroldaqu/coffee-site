@@ -6,8 +6,8 @@
 
 .specialty_line--products,
 .mountain_line--products {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
 
     img {
         max-width: 60%;
@@ -24,31 +24,35 @@
 
 }
 
-.specialty_line {
-    margin-top: 10rem;
+.specialty_line,
+.mountain_line {
+    position: relative !important;
 }
 
 .mountain_line {
-    margin-top: 30rem;
-    margin-bottom: 30rem;
+    margin-top: 20rem !important;
+    margin-bottom: 5rem !important;
 }
 
-.specialty_line::before,
-.mountain_line::before {
+.specialty_line--products::before,
+.mountain_line--products::before {
+    position: absolute !important;
     content: "";
     background-color: $green;
     position: absolute;
     width: 100%;
     z-index: -99;
-    height: 750px;
-    transform: translateY(40%);
+    height: 650px;
+    bottom: -80px;
+    // transform: translateY(40%);
 }
 
 .lineup_name {
-    margin-top: 10rem;
+    margin-top: 5rem;
     display: flex;
     justify-content: center !important;
     align-items: center !important;
+    gap: 4rem;
 
     img {
         max-width: 7.5% !important;
@@ -58,6 +62,33 @@
         color: $white;
         font-weight: 400;
     }
+
+}
+
+@media (max-width: 768px) {
+    .specialty_line--products::before,
+    .mountain_line--products::before,
+    .lineup_name {
+        display: none !important;
+    }
+
+    .mountain_line {
+        margin: 4rem 0rem !important;
+    }
+
+    .specialty_line--products,
+    .mountain_line--products {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 4rem;
+        
+        p,h3 {
+            color: $green !important;
+        }
+    }
+
+
+
 
 }
 

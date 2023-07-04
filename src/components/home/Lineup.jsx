@@ -1,9 +1,21 @@
+import ProductsData from "../../data/ProductsData"
 import Button from "../../layouts/Button"
 import HomeProduct from "./HomeProduct"
 import ProductCarousel from "./ProductCarousel"
 
 
+import { useEffect, useState } from "react"
+
 const Lineup = () => {
+    const id = [1,2,3]
+    const [lineup, setLineup] = useState([])
+
+    useEffect(() => {
+        const filterLineup =  ProductsData && ProductsData.filter((product) => {
+            return product.lineup === 1
+        }) 
+        setLineup(filterLineup)
+    },[])
 
     return (
         <section className="home_lineup">
@@ -16,11 +28,11 @@ const Lineup = () => {
                         <Button  children={"More Products"}/>
                     </div>
                 </div>
-                    <ProductCarousel />  
+                    <ProductCarousel  lineup={lineup} />  
                     <div className="lineup_products">
-                        <HomeProduct />
-                        <HomeProduct />
-                        <HomeProduct />                
+                        {lineup.length !== 0 && lineup.map((product => (
+                            <HomeProduct key={product.id} product={product}/>
+                        )))}          
                     </div> 
 
             </div>

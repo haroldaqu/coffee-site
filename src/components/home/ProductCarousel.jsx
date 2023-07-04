@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 
 
-const ProductCarousel = () => {
+const ProductCarousel = ({lineup}) => {
     return(
         <div className="product_carousel">
             <Swiper
@@ -31,15 +31,11 @@ const ProductCarousel = () => {
                     }
                 }}
             >
-                <SwiperSlide>
-                    <HomeProduct />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <HomeProduct />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <HomeProduct />
-                </SwiperSlide>
+                {lineup.length !== 0 && lineup.map(product => (
+                    <SwiperSlide key={product.id}>
+                        <HomeProduct product={product} />
+                    </SwiperSlide>  
+                ))}
             </Swiper>
         </div>
     )

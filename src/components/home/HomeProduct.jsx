@@ -1,11 +1,11 @@
 import Button from "../../layouts/Button"
 
-const HomeProduct = ({toggle}) => {
+const HomeProduct = ({toggle, product}) => {
     return (
         <div className="home_product">
-            <img src="/images/products/colombia_coffee.png" alt="" />
-            <h3>Colombia</h3>
-            <p>We have a possion for coffee and people. Make sure you always have your favorite cup of coffee around to start your day off right.</p>
+            <img src={product.img} alt="" />
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
             {toggle ? <Button  children={"BUY NOW"}/> : null}
         </div>
     )

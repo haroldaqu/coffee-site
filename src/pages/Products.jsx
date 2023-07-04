@@ -1,6 +1,22 @@
+import { useEffect, useState } from "react"
 import HomeProduct from "../components/home/HomeProduct"
+import ProductsData from "../data/ProductsData"
 
 const Products  = () => {
+    const [specialty, setSpecialty] = useState([])
+    const [mountain, setMountain] = useState([])
+
+    useEffect(() => {
+        const filterSpecialtiy =  ProductsData && ProductsData.filter((product) => {
+            return product.lineup === 1
+        }) 
+        setSpecialty(filterSpecialtiy)
+        const filterMountain =  ProductsData && ProductsData.filter((product) => {
+            return product.lineup === 2
+        }) 
+        setMountain(filterMountain)
+    },[])
+
     return(
         <main className="products">
             
@@ -14,9 +30,13 @@ const Products  = () => {
 
             <section className="specialty_line">
                 <div className="specialty_line--products">
-                    <HomeProduct toggle={true} />
-                    <HomeProduct toggle={true} />
-                    <HomeProduct toggle={true} />
+                    {specialty.length !== 0 && specialty.map((product => (
+                        <HomeProduct 
+                        key={product.id} 
+                        product={product}
+                        toggle={true}
+                        />
+                    )))}  
                 </div>
                 <div className="lineup_name">
                     <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
@@ -26,9 +46,13 @@ const Products  = () => {
 
             <section className="mountain_line">
                 <div className="mountain_line--products">
-                    <HomeProduct toggle={true} />
-                    <HomeProduct toggle={true} />
-                    <HomeProduct toggle={true} />
+                    {mountain.length !== 0 && mountain.map((product => (
+                        <HomeProduct 
+                        key={product.id} 
+                        product={product}
+                        toggle={true}
+                        />
+                    )))}  
                 </div>
                 <div className="lineup_name">
                     <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
