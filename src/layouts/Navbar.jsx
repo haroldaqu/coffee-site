@@ -10,19 +10,22 @@ const Navbar = ({mobileMenu, setMobileMenu, currentLink, setCurrentLink}) => {
 
     return(
         <nav className="navbar">
-            <NavLink to="/" className="navbar_logo">Coffee</NavLink>
+            <NavLink to="/" className="navbar_logo">
+                <img src="/images/vectors/logo.png" alt="" />
+                Cama Coffee
+            </NavLink>
             <ul className={mobileMenu ? `active` : null} onClick={() => toggleMenu()}>
                 <li onClick={() => setCurrentLink(1)} >
-                    <NavLink to="/" className={currentLink === 1 ? "active" : null}>HOME</NavLink>
+                    <NavLink to="/" className={currentLink === 1 ? "active" : null}>Home</NavLink>
                 </li>
                 <li onClick={() => setCurrentLink(2)}>
-                    <NavLink to="/about" className={currentLink === 2 ? "active" : null}>ABOUT</NavLink>
+                    <NavLink to="/about" className={currentLink === 2 ? "active" : null}>About</NavLink>
                 </li>
                 <li onClick={() => setCurrentLink(3)}>
-                    <NavLink to="/products" className={currentLink === 3 ? "active" : null}>PRODUCTS</NavLink>
+                    <NavLink to="/products" className={currentLink === 3 ? "active" : null}>Products</NavLink>
                 </li>
                 <li onClick={() => setCurrentLink(4)}>
-                    <NavLink to="/contact" className={currentLink === 4 ? "active" : null}>CONTACT</NavLink>
+                    <NavLink to="/contact" className={currentLink === 4 ? "active" : null}>Contact</NavLink>
                 </li>
             </ul>
             <Button children={"Buy Now"} />

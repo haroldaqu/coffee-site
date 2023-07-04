@@ -40,8 +40,19 @@
 
     button {
         background-color: transparent;
-        color: $green;
+        color: $cream;
         border-color: $green;
+        background-color: $green;
+    }
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    img {
+        max-width: 15%;
     }
 }
 
