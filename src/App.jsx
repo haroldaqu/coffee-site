@@ -21,10 +21,25 @@ import ScrollToTop from './layouts/ScrollToTop';
 
 
 function App() {
-
+  const [products, setProducts] =  useState(null)
   const [mobileMenu, setMobileMenu] = useState(false)
   const [currentLink, setCurrentLink] = useState(1)
   const width = window.innerWidth 
+
+  const fetchProducts = async () => {
+    const response = await fetch("/api/products")
+    const data = await response.json()
+
+    if (response.ok) {
+      setProducts(data)
+      console.log(products)
+    }
+    
+  }
+
+  useEffect(() => {
+    fetchProducts()
+  }, [])
 
   useEffect(() => {
     if (mobileMenu && width <= 786 ) {
@@ -52,6 +67,7 @@ function App() {
         /> } />
         <Route path="/products" element={<Products 
           setCurrentLink={setCurrentLink}
+          products={products}
         /> } />
         <Route path="/contact" element={<Contact
           setCurrentLink={setCurrentLink}

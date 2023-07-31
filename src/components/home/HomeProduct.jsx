@@ -7,6 +7,7 @@ const HomeProduct = ({toggle, product}) => {
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             {toggle ? <Button  children={"BUY NOW"}/> : null}
+            <p>{product.price}</p>
         </div>
     )
 }

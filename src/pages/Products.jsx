@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import HomeProduct from "../components/home/HomeProduct"
 import productsData from "../data/ProductsData"
 
-const Products  = ({setCurrentLink}) => {
+const Products  = ({setCurrentLink, products}) => {
     const [specialty, setSpecialty] = useState([])
     const [mountain, setMountain] = useState([])
 
@@ -30,13 +30,22 @@ const Products  = ({setCurrentLink}) => {
 
             <section className="specialty_line">
                 <div className="specialty_line--products">
-                    {specialty.length !== 0 && specialty.map((product => (
+                    {/* {specialty.length !== 0 && specialty.map((product => (
                         <HomeProduct 
                         key={product.id} 
                         product={product}
                         toggle={true}
                         />
-                    )))}  
+                    )))}   */}
+                    {products && 
+                        products
+                        .filter(product => product.lineup === "Specialty")
+                        .map(product => (
+                        <HomeProduct 
+                            key={product.id}
+                            product={product}
+                        />
+                    ))}
                 </div>
                 <div className="lineup_name">
                     <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
@@ -46,13 +55,22 @@ const Products  = ({setCurrentLink}) => {
 
             <section className="mountain_line">
                 <div className="mountain_line--products">
-                    {mountain.length !== 0 && mountain.map((product => (
+                    {/* {mountain.length !== 0 && mountain.map((product => (
                         <HomeProduct 
                         key={product.id} 
                         product={product}
                         toggle={true}
                         />
-                    )))}  
+                    )))}   */}
+                    {products && 
+                        products
+                        .filter(product => product.lineup === "Mountain")
+                        .map(product => (
+                        <HomeProduct 
+                            key={product.id}
+                            product={product}
+                        />
+                    ))}
                 </div>
                 <div className="lineup_name">
                     <img src="/images/vectors/arrow-squiggly.png" alt="" className="" />
